@@ -1,0 +1,279 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           Notes
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/Notes#readme>
+homepage:       https://github.com/githubuser/Notes#readme
+bug-reports:    https://github.com/githubuser/Notes/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/Notes
+
+library
+  exposed-modules:
+      Aeson.Tutorial
+      DSLs.Tutorial
+      Free.FreeTransformer
+      Free.ListT
+      Free.Tutorial1
+      Free.Tutorial2
+      Free.Tutorial3
+      Lib
+      Optics.Lib
+      Optics.Tutorial1
+      Papers.DataTypesAlacarte
+      Papers.Quickcheck
+      Papers.RecursionSchemes
+      Scraper.Lib
+      Servant.Auth
+      Servant.Implementation
+      Servant.Implementation2
+      Servant.Tutorial
+      Streaming.Conduit1
+      Streaming.Tutorial1
+      Streaming.Tutorial2
+      Types.Tutorial1
+      Web.Db
+      Web.Domain
+      Web.Lib
+      Web.Memory
+      Web.Web
+      AsyncMVar
+      AsyncTMVar
+      Basic.Basic1
+      Basic.LoggerExMVar
+      Basic.LoggerExSTM
+      Chat.Chat1
+      Chat.Factor1
+      Chat.Factor2
+      Chat.Factor3
+      Chat.Factor4
+      Chat.Shared
+      Chat2.Client
+      Chat2.Lib
+      Chat2.Types
+      DataStructures.ArrayBlockingQueue
+      DataStructures.ArrayBlockingQueueSTM
+      DataStructures.ChaseLevDeque
+      DataStructures.HarrisList
+      DataStructures.HarrisList2
+      DataStructures.HarrisListSTM
+      DataStructures.MichaelScottQueue
+      DataStructures.TreiberStack
+      Exceptions
+      Locks.Class
+      Locks.MCSLock
+      Locks.Spinlock
+      Locks.Tests
+      Locks.Ticketlock
+      P2Chan
+      P2Mvar
+      Paralelism.Eval
+      Paralelism.Par
+      ParallelFileSearch
+      Semaphores
+      STM
+      Timeout
+  other-modules:
+      Paths_Notes
+  hs-source-dirs:
+      Notes
+      Concurrency
+  default-extensions:
+      GHC2021,ImportQualifiedPost, BangPatterns, NamedFieldPuns, ScopedTypeVariables, NoMonomorphismRestriction, OverloadedStrings
+  build-depends:
+      HUnit
+    , QuickCheck
+    , aeson
+    , async
+    , async-pool
+    , atomic-primops
+    , base >=4.7 && <5
+    , bytestring
+    , case-insensitive
+    , comonad
+    , conduit
+    , containers
+    , deepseq
+    , directory
+    , extra
+    , free
+    , ghc-prim
+    , hedis
+    , http-client
+    , http-conduit
+    , http-media
+    , katip
+    , lens
+    , mtl
+    , network
+    , parallel
+    , pipes
+    , postgresql-simple
+    , process
+    , random
+    , regex-base
+    , regex-pcre
+    , resource-pool
+    , scalpel
+    , servant
+    , servant-client
+    , servant-server
+    , stm
+    , string-conversions
+    , text
+    , text-show
+    , time
+    , transformers
+    , unix
+    , unliftio
+    , unordered-containers
+    , vector
+    , wai
+    , wai-extra
+    , warp
+    , websockets
+  default-language: Haskell2010
+
+executable Notes-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Notes
+  hs-source-dirs:
+      app
+  default-extensions:
+      GHC2021,ImportQualifiedPost, BangPatterns, NamedFieldPuns, ScopedTypeVariables, NoMonomorphismRestriction, OverloadedStrings
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , Notes
+    , QuickCheck
+    , aeson
+    , async
+    , async-pool
+    , atomic-primops
+    , base >=4.7 && <5
+    , bytestring
+    , case-insensitive
+    , comonad
+    , conduit
+    , containers
+    , deepseq
+    , directory
+    , extra
+    , free
+    , ghc-prim
+    , hedis
+    , http-client
+    , http-conduit
+    , http-media
+    , katip
+    , lens
+    , mtl
+    , network
+    , parallel
+    , pipes
+    , postgresql-simple
+    , process
+    , random
+    , regex-base
+    , regex-pcre
+    , resource-pool
+    , scalpel
+    , servant
+    , servant-client
+    , servant-server
+    , stm
+    , string-conversions
+    , text
+    , text-show
+    , time
+    , transformers
+    , unix
+    , unliftio
+    , unordered-containers
+    , vector
+    , wai
+    , wai-extra
+    , warp
+    , websockets
+  default-language: Haskell2010
+
+test-suite Notes-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_Notes
+  hs-source-dirs:
+      test
+  default-extensions:
+      GHC2021,ImportQualifiedPost, BangPatterns, NamedFieldPuns, ScopedTypeVariables, NoMonomorphismRestriction, OverloadedStrings
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , Notes
+    , QuickCheck
+    , aeson
+    , async
+    , async-pool
+    , atomic-primops
+    , base >=4.7 && <5
+    , bytestring
+    , case-insensitive
+    , comonad
+    , conduit
+    , containers
+    , deepseq
+    , directory
+    , extra
+    , free
+    , ghc-prim
+    , hedis
+    , http-client
+    , http-conduit
+    , http-media
+    , katip
+    , lens
+    , mtl
+    , network
+    , parallel
+    , pipes
+    , postgresql-simple
+    , process
+    , random
+    , regex-base
+    , regex-pcre
+    , resource-pool
+    , scalpel
+    , servant
+    , servant-client
+    , servant-server
+    , stm
+    , string-conversions
+    , text
+    , text-show
+    , time
+    , transformers
+    , unix
+    , unliftio
+    , unordered-containers
+    , vector
+    , wai
+    , wai-extra
+    , warp
+    , websockets
+  default-language: Haskell2010

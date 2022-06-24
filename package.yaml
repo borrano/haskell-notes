@@ -1,0 +1,112 @@
+name:                Notes
+version:             0.1.0.0
+github:              "githubuser/Notes"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2022 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/Notes#readme>
+default-extensions:   GHC2021,ImportQualifiedPost, BangPatterns, NamedFieldPuns, ScopedTypeVariables, NoMonomorphismRestriction, OverloadedStrings
+
+dependencies:
+- base >= 4.7 && < 5
+- QuickCheck
+- async
+- bytestring
+- text
+- process
+- free
+- comonad
+- containers
+- transformers
+- mtl 
+- async
+- bytestring
+- text
+- http-client
+- http-conduit
+- text
+- stm
+- directory
+- servant
+- servant-client
+- servant-server
+
+- time
+- aeson
+- warp
+- wai
+- wai-extra
+- http-media
+- HUnit
+- lens
+- network
+- conduit
+- pipes
+- katip
+- unliftio
+- regex-pcre
+- regex-base
+- random
+- resource-pool
+- postgresql-simple
+- case-insensitive
+- hedis
+- string-conversions
+- unordered-containers
+- vector
+- scalpel
+- text-show
+- async-pool
+ 
+- websockets
+- unliftio
+- regex-pcre
+- regex-base
+- random
+- katip
+- parallel
+- deepseq
+- extra
+- atomic-primops
+- unix 
+- ghc-prim
+
+library:
+  source-dirs: 
+    - Notes
+    - Concurrency
+executables:
+  Notes-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+
+    dependencies:
+    - Notes
+
+tests:
+  Notes-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - Notes
